@@ -16,7 +16,7 @@ const NotFound = props => {
       <p className="Notfound_Subheader">
         We are sorry, the page you requested could not be found
       </p>
-      <button className="home_btn" type="button" onClick={onClickHomePage}>
+      <button type="button" className="home_btn" onClick={onClickHomePage}>
         Home Page
       </button>
     </div>

@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner'
 
 import {BsGrid3X3} from 'react-icons/bs'
 
-import {FaCamera} from 'react-icons/fa'
+import {BiCamera} from 'react-icons/bi'
 
 import Header from '../Header'
 
@@ -42,14 +42,18 @@ class MyProfile extends Component {
           src="https://assets.ccbp.in/frontend/react-js/nxt-watch-failure-view-light-theme-img.png"
           alt="failure view"
         />
-        <h1>Oops! Something Went Wrong</h1>
-        <p>
-          We are having some trouble to complete your request. Please try again.
-        </p>
-        <button type="button">Retry</button>
+
+        <p>Something went wrong. Please try again</p>
+        <button type="button" onClick={this.OnRetryApiMyProfile}>
+          Try again
+        </button>
       </div>
     </>
   )
+
+  OnRetryApiMyProfile = () => {
+    this.getMyProfileAPi()
+  }
 
   rendermyProfile = () => {
     const {apiStatus} = this.state
@@ -77,34 +81,38 @@ class MyProfile extends Component {
       },
     }
     const response = await fetch(url, options)
-
-    if (response.ok) {
-      const data = await response.json()
-      console.log('my profile data=', data)
-      const UpdatedmyData = {
-        followersCount: data.profile.followers_count,
-        followingCount: data.profile.following_count,
-        id: data.profile.id,
-        postsCount: data.profile.posts_count,
-        profilePic: data.profile.profile_pic,
-        userBio: data.profile.user_bio,
-        myId: data.profile.my_id,
-        userName: data.profile.user_name,
-        posts: data.profile.posts.map(each => ({
-          id: each.id,
-          image: each.image,
-        })),
-        stories: data.profile.stories.map(each => ({
-          id: each.id,
-          image: each.image,
-        })),
+    try {
+      if (response.ok) {
+        const data = await response.json()
+        console.log('my profile data=', data)
+        const UpdatedmyData = {
+          followersCount: data.profile.followers_count,
+          followingCount: data.profile.following_count,
+          id: data.profile.id,
+          postsCount: data.profile.posts_count,
+          profilePic: data.profile.profile_pic,
+          userBio: data.profile.user_bio,
+          userId: data.profile.user_id,
+          userName: data.profile.user_name,
+          posts: data.profile.posts.map(each => ({
+            id: each.id,
+            image: each.image,
+          })),
+          stories: data.profile.stories.map(each => ({
+            id: each.id,
+            image: each.image,
+          })),
+        }
+        this.setState({
+          myProfileList: UpdatedmyData,
+          apiStatus: apiStatusConstants.success,
+        })
+        console.log('data=', data)
+      } else {
+        this.setState({apiStatus: apiStatusConstants.failure})
       }
-      this.setState({
-        myProfileList: UpdatedmyData,
-        apiStatus: apiStatusConstants.success,
-      })
-      console.log('data=', data)
-    } else {
+    } catch (error) {
+      console.log('MyProfile Error:', error)
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
@@ -120,6 +128,7 @@ class MyProfile extends Component {
       userBio,
       stories,
       posts,
+      userId,
     } = myProfileList
     return (
       <div className="myProfile_container">
@@ -141,7 +150,9 @@ class MyProfile extends Component {
                 <span className="spanpost"> following</span>
               </p>
             </div>
-            <p className="profile_namesub">{userName}</p>
+            <p className="profile_namesub">
+              {userId.charAt(0).toUpperCase() + userId.slice(1).toLowerCase()}
+            </p>
             <p className="myBio">{userBio}</p>
           </div>
         </div>
@@ -157,7 +168,7 @@ class MyProfile extends Component {
           <div className="posticon_container">
             <BsGrid3X3 size={24} />
           </div>
-          <p className="postshow_header">Posts</p>
+          <h1 className="postshow_header">Posts</h1>
         </div>
         <div className="postshow_containerMain">
           {posts.length > 0 ? (
@@ -175,9 +186,9 @@ class MyProfile extends Component {
           ) : (
             <div className="noPost_container">
               <div className="nopostimg_container">
-                <FaCamera size={30} />
+                <BiCamera size={30} />
               </div>
-              <p className="nopost_header">No Posts Yet</p>
+              <h1 className="nopost_header">No Posts Yet</h1>
             </div>
           )}
         </div>

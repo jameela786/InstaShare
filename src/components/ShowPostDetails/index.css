@@ -59,7 +59,7 @@
   left: 24px;
   padding: 2px 0.76px 2px 0px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   border: 0px solid;
   background: transparent;
   cursor: pointer;
@@ -71,7 +71,7 @@
   top: 728px;
   left: 24px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
@@ -89,7 +89,7 @@
   top: 754px;
   left: 24px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -106,7 +106,7 @@
   top: 780px;
   left: 24px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -139,7 +139,7 @@
   height: 614px;
   top: 59px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 .post_header {
   font-family: Roboto;

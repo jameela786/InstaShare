@@ -46,6 +46,7 @@ class Login extends Component {
     const data = await response.json()
 
     if (response.ok === true) {
+      console.log('submit login success')
       this.onSubmitSuccess(data.jwt_token)
     } else {
       this.onSubmitFailure(data.error_msg)

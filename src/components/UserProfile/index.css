@@ -21,7 +21,7 @@
   top: 97px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   border-radius: 50%;
 }
 
@@ -35,7 +35,7 @@
   top: 99px;
   left: 444px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 32px;
   font-weight: 300;
@@ -51,7 +51,7 @@
   top: 195px;
   left: 444px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -68,7 +68,7 @@
   top: 155px;
   left: 444px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -104,7 +104,7 @@
   top: 155px;
   left: 555px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -121,7 +121,7 @@
   top: 155px;
   left: 701px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -137,7 +137,7 @@
   top: 227px;
   left: 444px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -162,7 +162,7 @@
   top: 341px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   align-self: flex-start;
   /* border: 1px solid #dbdbdb; */
 }
@@ -172,7 +172,7 @@
   top: 345px;
   left: 204px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   border: 1px solid #dbdbdb;
   border-radius: 50%;
 }
@@ -183,7 +183,7 @@
   top: 459px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   border: 0.5px solid #c6c6c8;
 }
 
@@ -195,7 +195,7 @@
   top: 491px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   margin-left: 30px;
 }
 
@@ -206,7 +206,7 @@
   left: 200px;
   padding: 3px 4.13px 4.13px 3px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 .icon_img {
@@ -215,7 +215,7 @@
   top: 3px;
   left: 3px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   color: #262626;
 }
 .postshow_header {
@@ -224,7 +224,7 @@
   top: 491px;
   left: 236px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 24px;
   font-weight: 500;
@@ -260,7 +260,7 @@
   top: 547px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 .noPost_container {
@@ -269,7 +269,7 @@
   top: 522px;
   left: 629px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   color: #262626;
 }
 
@@ -279,7 +279,7 @@
   top: 522px;
   left: 677px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   border: 2px solid #262626;
   border-radius: 50%;
   display: flex;
@@ -292,7 +292,7 @@
   top: 624px;
   left: 629px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 32px;
   font-weight: 300;

@@ -5,7 +5,7 @@
   width: 1440px;
   height: 64px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 .logo_header {
   color: #262626;
@@ -14,7 +14,7 @@
   margin-top: 5px;
   left: 271px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 20px;
   font-weight: 500;
@@ -29,7 +29,7 @@
   top: 24px;
   left: 793px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
@@ -44,7 +44,7 @@
   outline: none;
 }
 .search_container {
-  display: flex;
+  /* display: flex;
   align-items: center;
 
   width: 214px;
@@ -55,7 +55,14 @@
   border-radius: 3px 0px 0px 0px;
   border: 1px solid #dbdbdb;
   opacity: 0px;
-  color: #fafafa;
+  color: #fafafa; */
+  display: flex;
+  align-items: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: fit-content;
+  height: 28px;
+  overflow: hidden;
 }
 
 .search_icon {
@@ -64,7 +71,7 @@
   top: 27px;
   left: 972px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 .search_button {
@@ -82,7 +89,7 @@
   left: 960px;
   gap: 0px;
   border-radius: 0px 2px 2px 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 .logo_container_header {
@@ -94,7 +101,7 @@
   top: 17px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 @media screen and (max-width: 767px) {
   .nav-header {
@@ -152,7 +159,7 @@
   top: 17px;
   left: 200px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 @media screen and (min-width: 768px) {
@@ -162,7 +169,7 @@
     top: 17px;
     left: 200px;
     gap: 0px;
-    opacity: 0px;
+    opacity: 1px;
   }
 }
 
@@ -206,7 +213,7 @@
   top: 23px;
   left: 1081px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 .nav-menu-mobile {
@@ -254,7 +261,7 @@
   padding: 8px 24px 8px 24px;
   gap: 8px;
   border-radius: 4px 0px 0px 0px;
-  opacity: 0px;
+  opacity: 1px;
 }
 
 @media screen and (max-width: 767px) {
